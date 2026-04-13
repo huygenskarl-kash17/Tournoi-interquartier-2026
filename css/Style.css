@@ -304,11 +304,13 @@ body{
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    color:#fff;
+    overflow-x:hidden;
 }
-
 /* IMPORTANT : pousse le footer en bas */
 main{
     flex:1;
+    width:100%;
 }
 
 footer{
@@ -324,12 +326,11 @@ header{
 
 
 footer{
+    margin-top:auto;
     background:rgba(0,30,80,0.85);
     text-align:center;
     padding:20px;
     border-top:1px solid rgba(255,255,255,0.2);
-
-    animation:fadeUp 1s ease;
 }
 
 /* animation d'apparition */
@@ -417,3 +418,50 @@ table tr:nth-child(odd){
     -webkit-text-fill-color:transparent;
 }
 
+
+
+
+
+
+
+
+
+.card{
+    position:relative; /* AJOUTE ÇA */
+    padding:10px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.07);
+    backdrop-filter:blur(1px);
+    border:19px solid rgba(255,255,255,0.12);
+    transition:0.3s;
+}
+
+.slide{
+    display:none;
+    position:relative;
+    width:100%;
+}
+
+.slide.active{
+    display:block;
+}
+
+
+main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+
+
+
+.contact-page{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
