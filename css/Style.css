@@ -656,3 +656,44 @@ img{
     }
 }
 
+
+@media (max-width: 768px) {
+    /* 1. Force le conteneur principal à tout aligner au milieu */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    /* Centre horizontalement */
+        text-align: center;     /* Centre le texte (ex: "Description") */
+        width: 100%;
+        overflow-x: hidden;     /* Empêche le glissement horizontal bizarre */
+    }
+
+    /* 2. Centre le slider et les images de la galerie */
+    .slider, .container, .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 3. Assure-toi que chaque carte est centrée */
+    .card {
+        width: 90% !important;  /* Prend presque toute la largeur */
+        margin: 15px auto !important; /* Force la marge automatique à gauche et à droite */
+    }
+
+    /* 4. Pour les images seules (comme Neymar ou les matchs) */
+    .slide img, .card img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    
+    /* 5. Aligne le texte de description */
+    .contact-page h2, p {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
