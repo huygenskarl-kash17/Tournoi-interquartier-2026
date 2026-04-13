@@ -490,13 +490,15 @@ form {
         padding: 15px 5px;
     }
 
+  
     nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour que les mots ne se touchent pas */
-        gap: 8px;
-        width: 100%;
-        margin-top: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center; /* Aligne les liens au centre de leurs colonnes */
+        padding: 0;
     }
+
 
     nav a {
         font-size: 12px;
@@ -628,11 +630,19 @@ img{
     }
 
     .contact-btn {
-        width: 100% !important; /* Force la largeur totale */
-        max-width: none;
-        padding: 15px;
-        font-size: 16px;
-    }
+    display: flex;          /* Active le mode Flexbox */
+    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center;     /* Centre le texte verticalement */
+    text-align: center;      /* Sécurité pour le texte */
+    
+    /* Garde tes autres propriétés (padding, background, etc.) */
+    padding: 15px 30px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
     form {
         width: 100% !important;
