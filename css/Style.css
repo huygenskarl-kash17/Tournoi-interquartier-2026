@@ -465,3 +465,66 @@ main{
     align-items:center;
     padding:40px 20px;
 }
+
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        padding:15px;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        margin-top:10px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+}
+
+@media (max-width:768px){
+
+    form{
+        width:90%;
+    }
+
+    input, button{
+        width:100%;
+        font-size:16px;
+    }
+}
+@media (max-width:768px){
+
+    .contact-box{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-btn{
+        width:80%;
+        text-align:center;
+    }
+}
+
+@media (max-width:768px){
+
+    .slide img{
+        height:250px;
+    }
+
+    .slide-text{
+        font-size:30px;
+    }
+}
+@media (max-width:768px){
+
+    footer{
+        font-size:14px;
+        padding:15px;
+    }
+}
