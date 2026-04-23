@@ -1,28 +1,39 @@
-let index = 0;
-autoSlide();
+window.addEventListener("load", () => {
+document.querySelector(".loader").style.display = "none";
+});
+
+/* MENU MOBILE */
+const nav = document.querySelector("nav ul");
+document.querySelector(".logo").addEventListener("click", () => {
+nav.classList.toggle("active");
+});
 
 /* SLIDER */
-function autoSlide(){
-    let slides = document.querySelectorAll(".slide");
-    slides.forEach(s => s.style.display="none");
+let index = 0;
+const slides = document.querySelectorAll(".slide");
 
-    index++;
-    if(index > slides.length){index = 1;}
-
-    slides[index-1].style.display="block";
-    setTimeout(autoSlide,2000);
+function showSlide(){
+slides.forEach(s => s.style.display = "none");
+index++;
+if(index > slides.length){index = 1;}
+slides[index-1].style.display = "block";
+setTimeout(showSlide, 3000);
 }
 
+if(slides.length > 0){
+showSlide();
+}
+
+/* DOTS */
 function currentSlide(n){
-    index = n-1;
-    autoSlide();
+index = n-1;
+showSlide();
 }
 
-/* ACTIVE NAV AUTO DETECT */
-let links = document.querySelectorAll("nav a");
-links.forEach(link=>{
-    if(link.href === window.location.href){
-        link.classList.add("active");
-    }
-});
+
+
+
+
+
+
 

@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matchs</title>
-<link rel="stylesheet" href="css/Style.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/match.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
@@ -27,55 +28,91 @@
 <li><a href="match.html" class="active">Matchs</a></li>
 <li><a href="classement.html">Classement</a></li>
 <li><a href="contact.html">Contact</a></li>
-<li><a href="galerie.html">Galerie</a></li>
+<li><a href="historique.html">Historique</a></li>
 </ul>
 </nav>
 </header>
 <main>
 
-<div class="container">
-<div class="cards">
+<section class="calendrier">
 
+    <h1 class="titre">Calendrier</h1>
 
-<div class="card">
-    <img src="images/match1.jpeg" alt="Equipe" class="card-img">
-    <h3>Kamarenge vs Bana Kipushi</h3>
-</div>
-<div class="card">
-    <img src="images/match2.jpeg" alt="Equipe" class="card-img">
-    <h3>Ajax vs Munana</h3>
-</div>
-<div class="card">
-    <img src="images/match3.jpeg" alt="Equipe" class="card-img">
-    <h3>JSK vs Jeune Espoir</h3>
-</div>
-<div class="card">
-    <img src="images/match4.jpeg" alt="Equipe" class="card-img">
-    <h3>Jeune d'Or vs Bradeur</h3>
-</div>
-<div class="card">
-    <img src="images/match5.jpeg" alt="Equipe" class="card-img">
-    <h3>Galaxy vs Renaissance</h3>
-</div>
-<div class="card">
-    <img src="images/match6.jpeg" alt="Equipe" class="card-img">
-    <h3>Nyota FC vs Stars FC</h3>
+    <!-- MATCH D'OUVERTURE -->
+    <h2 class="sous-titre">Match d'ouverture</h2>
+    <div class="cards ouverture">
+        <div class="card grand">
+            <img src="images/m1.jpg" alt="Match ouverture">
+            <div class="card-text">UHURU 1 vs KALUBAMBA 2</div>
+        </div>
+    </div>
+
+    <!-- PHASE DE GROUPE -->
+    <h2 class="sous-titre">Phase de groupe</h2>
+    <div class="cards">
+        <div class="card"><img src="images/m2.jpg"><div class="card-text">KAMALENGE 1 vs KATCHOMA 2</div></div>
+        <div class="card"><img src="images/m3.jpg"><div class="card-text">KATCHOMA 1 vs KAMALENGE 2</div></div>
+        <div class="card"><img src="images/m4.jpg"><div class="card-text">MUNGOTI 2 vs UHURU 2</div></div>
+        <div class="card"><img src="images/m5.jpg"><div class="card-text">UHURU 2 vs MUNGOTI 1</div></div>
+        <div class="card"><img src="images/m6.jpg"><div class="card-text">LUMUMBA 2 vs KATCHOMA 1</div></div>
+        <div class="card"><img src="images/m7.jpg"><div class="card-text">KALUBAMBA 2 vs KALUBAMBA 1</div></div>
+        <div class="card"><img src="images/m8.jpg"><div class="card-text">KATCHOMA 2 vs LUMUMBA 1</div></div>
+        <div class="card"><img src="images/m9.jpg"><div class="card-text">LUMUMBA 1 vs UHURU 1</div></div>
+        <div class="card"><img src="images/m10.jpg"><div class="card-text">LUMUMBA 1 vs KAMALENGE 2</div></div>
+        <div class="card"><img src="images/m11.jpg"><div class="card-text">LUMUMBA 2 vs KAMALENGE 2</div></div>
+        <div class="card"><img src="images/m12.jpg"><div class="card-text">MUNGOTI 1 vs MUNGOTI 2</div></div>
+    </div>
+
+    <!-- QUART DE FINALE -->
+    <h2 class="sous-titre">Quart de finale</h2>
+    <div class="cards">
+        <div class="card"><img src="images/m13.jpg"><div class="card-text">Quart 1</div></div>
+        <div class="card"><img src="images/m14.jpg"><div class="card-text">Quart 2</div></div>
+        <div class="card"><img src="images/m15.jpg"><div class="card-text">Quart 3</div></div>
+        <div class="card"><img src="images/m16.jpg"><div class="card-text">Quart 4</div></div>
+    </div>
+
+    <!-- DEMI FINALE -->
+    <h2 class="sous-titre">Demi-finale</h2>
+    <div class="cards">
+        <div class="card"><img src="images/m17.jpg"><div class="card-text">Demi 1</div></div>
+        <div class="card"><img src="images/m18.jpg"><div class="card-text">Demi 2</div></div>
+    </div>
+
+    <!-- FINALE -->
+    <h2 class="sous-titre">Finale</h2>
+    <div class="cards ouverture">
+        <div class="card grand">
+            <img src="images/m19.jpg">
+            <div class="card-text">Grande Finale</div>
+        </div>
+    </div>
+
+</section>
+<!-- DIAGRAMME -->
+<h2 class="sous-titre">Diagramme de la compétition</h2>
+
+<div class="diagramme-container">
+    <img src="images/diagramme.jpg" alt="Diagramme" id="diagramme-img">
 </div>
 
+<div class="download-btn-container">
+    <a href="images/calendrier.jpg" download="calendrier-tournoi" class="btn-download">
+        Télécharger le calendrier
+    </a>
+</div>
 
-</div>
-</div>
 </main>
 
 <footer>
 <p>© 2026 Tournois MAMADU NDALA</p>
 <a href="#"><i class="fa-brands fa-facebook"></i></a>
-<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/243849517626"><i class="fa-brands fa-whatsapp"></i></a>
 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
 <a href="#"><i class="fa-brands fa-github"></i></a>
 <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
 </footer>
 
-<script src="js/Script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
