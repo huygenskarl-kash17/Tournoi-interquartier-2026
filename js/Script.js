@@ -1,3 +1,6 @@
+window.addEventListener("load", () => {
+document.querySelector(".loader").style.display = "none";
+});
 
 /* MENU MOBILE */
 const nav = document.querySelector("nav ul");
