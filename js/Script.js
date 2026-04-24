@@ -1,39 +1,36 @@
-window.addEventListener("load", () => {
-document.querySelector(".loader").style.display = "none";
-});
-
-/* MENU MOBILE */
-const nav = document.querySelector("nav ul");
-document.querySelector(".logo").addEventListener("click", () => {
-nav.classList.toggle("active");
-});
-
-/* SLIDER */
-let index = 0;
+let slideIndex = 0;
+let slideTimeout;
 const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
-function showSlide(){
-slides.forEach(s => s.style.display = "none");
-index++;
-if(index > slides.length){index = 1;}
-slides[index-1].style.display = "block";
-setTimeout(showSlide, 3000);
+function showSlides(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    // Cache toutes les images
+    slides.forEach(s => s.style.display = "none");
+    // Retire la classe active des points
+    dots.forEach(d => d.style.opacity = "0.5");
+
+    slides[slideIndex].style.display = "block";
+    if(dots[slideIndex]) dots[slideIndex].style.opacity = "1";
+
+    // Relance le chrono (3 secondes)
+    clearTimeout(slideTimeout);
+    slideTimeout = setTimeout(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 3000);
 }
 
-if(slides.length > 0){
-showSlide();
+// Fonctions appelées par tes onclick="" dans le HTML
+function plusSlide(n) {
+    showSlides(slideIndex += n);
 }
 
-/* DOTS */
-function currentSlide(n){
-index = n-1;
-showSlide();
+function currentSlide(n) {
+    showSlides(slideIndex = n - 1);
 }
 
-
-
-
-
-
-
-
+// Lancement au chargement
+showSlides(slideIndex);
