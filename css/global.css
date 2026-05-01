@@ -38,6 +38,8 @@ nav ul{
 display:flex;
 gap:20px;
 list-style:none;
+position:relative;
+z-index:999;
 }
 
 nav a{
