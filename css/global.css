@@ -108,6 +108,12 @@ nav ul{
 flex-direction:column;
 background:#102a5c;
 position:absolute;
+
+  nav ul li a{
+color:white;
+display:block;
+padding:10px;
+  }
 top:70px;
 right:0;
 width:200px;
