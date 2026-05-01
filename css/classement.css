@@ -77,18 +77,10 @@ text-align:left;
 padding-left:10px;
 }
 
-/* MOBILE */
 @media(max-width:768px){
 
-.titre-classement{
-font-size:22px;
-}
-
 .groupes-container{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-padding:20px;
+grid-template-columns:1fr;
 }
 
 .table-groupe th,
@@ -97,15 +89,9 @@ font-size:12px;
 padding:6px;
 }
 
+.table-groupe td{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
-@media(max-width:768px){
-
-.table-groupe{
-font-size:12px;
-}
-
-.table-groupe td:nth-child(2){
-min-width:120px;
-}
-
 }
