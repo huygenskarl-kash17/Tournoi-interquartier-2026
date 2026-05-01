@@ -116,3 +116,9 @@ nav ul.active{
 display:flex;
 }
 }
+
+.menu-toggle{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
