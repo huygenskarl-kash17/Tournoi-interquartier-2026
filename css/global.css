@@ -50,7 +50,7 @@ transition:0.3s;
 }
 
 nav a:hover,
-nav .active{
+nav a.active{
 background:white;
 color:#102a5c;
 border-radius:5px;
